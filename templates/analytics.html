@@ -1,0 +1,159 @@
+{% include 'shared/header.html' %}
+
+
+    <div class="content-wrapper oh">
+
+      <!-- Hero -->
+      <section class="hero bg-green">
+        <div class="container hero__container hero__container--720">
+
+          <div class="row hero__outer flex-vertical-align-center">
+            <div class="col-md-12 mt-50 text-center hidden-sm hidden-xs">
+              <img src="{{ url_for('static', filename='img/hero/norman_dashboard_edited.png') }}" style="height: 500%; width: 100%" alt="">
+            </div>
+            <div class="col-lg-5 col-lg-offset-2 col-md-5 col-xs-12">
+              <div class="optin optin--mt-minus-30 text-center">
+                <h1 class="optin__title">Conveniently collate and analyze your patient data.</h1>
+                <form class="optin__form">
+                  <button href="javascript:handleAjaxRoute('auth/register', {'source':'landingPage'})" class="optin__btn btn btn--lg btn--color btn--wide btn--button square">Register</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section> <!-- end hero -->
+
+      <!-- Video -->
+      <section class="section-wrap bg-light bottom-divider" id="video">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4?showinfo=0" class="embed-responsive-item"></iframe>
+              </div>
+              <span class="video-caption">Quick Norman Overview.</span>
+            </div>
+          </div>
+        </div>
+      </section> <!-- end video-section -->
+
+
+      <!-- Benefits -->
+      <section class="section-wrap pb-100" id="benefits">
+        <div class="container">
+          <div class="heading-row text-center">
+            <h2 class="heading">Here's a sneak peek of what Norman Analytics offers you</h2>
+          </div>
+          <div class="row">
+
+            <div class="col-sm-6">
+                <div class="col-sm-6 mb-sm-40">
+                {% for feature, description in config.NORMAN_FEATURES_LEFT.items() %}
+              <div class="benefit">
+                <i class="benefit__icon ui-check"></i>
+                <p class="benefit__text lead">{{ description.description }}</p>
+              </div>
+                {% endfor %}
+            </div> <!-- end col -->
+
+
+
+            <div class="col-sm-6 mb-sm-40">
+                {% for feature, description in config.NORMAN_FEATURES_RIGHT.items() %}
+              <div class="benefit">
+                <i class="benefit__icon ui-check"></i>
+                <p class="benefit__text lead">{{ description.description }}</p>
+              </div>
+                {% endfor %}
+            </div> <!-- end col -->
+
+          </div>
+        </div>
+      </section> <!-- end benefits -->
+
+      <section class="section-wrap bg-light bottom-divider" id="testimonials">
+        <div class="container">
+          <div class="heading-row text-center">
+            <h2 class="heading">Those who already tried it</h2>
+          </div>
+
+          <div class="row">
+
+            <div id="owl-testimonials" class="owl-carousel owl-theme">
+
+              <div class="testimonial__wrap">
+                <div class="testimonial box-shadow text-center clearfix">
+                  <img src="{{ url_for('static', filename='img/testimonials/1.jpg') }}" alt="" class="testimonial__img">
+                  <div class="testimonial__body">
+                    <p class="testimonial__text">“I’am amazed, I should say thank you so much for your awesome template. Design is so good and neat.”</p>
+                  </div>
+                  <div class="testimonial__info">
+                    <span class="testimonial__author">Christine Clark</span>
+                    <span class="testimonial__company">DeoThemes</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial__wrap">
+                <div class="testimonial box-shadow text-center clearfix">
+                  <img src="{{ url_for('static', filename='img/testimonials/2.jpg') }}" alt="" class="testimonial__img">
+                  <div class="testimonial__body">
+                    <p class="testimonial__text">“Every detail has been taken care these team are realy amazing and talented! I will work only with emaus agency.”</p>
+                  </div>
+                  <div class="testimonial__info">
+                    <span class="testimonial__author">Mark Zukerberg</span>
+                    <span class="testimonial__company">Facebook</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial__wrap">
+                <div class="testimonial box-shadow text-center clearfix">
+                  <img src="{{ url_for('static', filename='img/testimonials/3.jpg') }}" alt="" class="testimonial__img">
+                  <div class="testimonial__body">
+                    <p class="testimonial__text">“I have witnessed and admired the work for years. I highly recommend this work for anyone seeking to increase.”</p>
+                  </div>
+                  <div class="testimonial__info">
+                    <span class="testimonial__author">Alex Samokhin</span>
+                    <span class="testimonial__company">Alphabet</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial__wrap">
+                <div class="testimonial box-shadow text-center clearfix">
+                  <img src="{{ url_for('static', filename='img/testimonials/1.jpg') }}" alt="" class="testimonial__img">
+                  <div class="testimonial__body">
+                    <p class="testimonial__text">“I’am amazed, I should say thank you so much for your awesome template. Design is so good and neat.”</p>
+                  </div>
+                  <div class="testimonial__info">
+                    <span class="testimonial__author">Christine Clark</span>
+                    <span class="testimonial__company">DeoThemes</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial__wrap">
+                <div class="testimonial box-shadow text-center clearfix">
+                  <img src="{{ url_for('static', filename='img/testimonials/2.jpg') }}" alt="" class="testimonial__img">
+                  <div class="testimonial__body">
+                    <p class="testimonial__text">“Every detail has been taken care these team are realy amazing and talented! I will work only with emaus agency.”</p>
+                  </div>
+                  <div class="testimonial__info">
+                    <span class="testimonial__author">Mark Zukerberg</span>
+                    <span class="testimonial__company">Facebook</span>
+                  </div>
+                </div>
+              </div>
+
+            </div> <!-- end of slider -->
+
+          </div>
+        </div>
+      </section> <!-- end testimonials -->
+
+
+{% include 'shared/newsletter.html' %}
+
+{% include 'shared/footer.html' %}

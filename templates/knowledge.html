@@ -1,0 +1,100 @@
+{% include 'shared/header.html' %}
+  <div class="content-wrapper oh">
+
+      <!-- Page Title -->
+      <section class="page-title bg-blue white-text text-center">
+        <div class="container">
+
+          <div class="page-title__outer">
+            <div class="page-title__inner">
+              <div class="page-title__holder">
+                <h1 class="page-title__title">Knowledge Base</h1>
+                <p class="page-title__subtitle lead">This is an extensive documentation of all features available on this platform.
+                Search for anything or click on any of the topics to get started.</p>
+                <form class="newsletter__form relative mt-20">
+                  <input type="email" class="newsletter__input" placeholder="Search the knowledge base"><input type="submit" class="btn btn--secondary-color btn--button newsletter__submit" value="Search">
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section> <!-- end page title -->
+
+
+      <!-- Articles -->
+      <section class="section-wrap pt-70 pb-120 bg-light">
+        <div class="container">
+          <div class="row items-grid">
+
+            <div class="col-md-3">
+              <a href="#" class="article box-shadow">
+                <i class="ui-computer-screen-1 article__icon"></i>
+                <h3 class="article__title">Getting Started</h3>
+              </a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="#" class="article box-shadow">
+                <i class="ui-windows-1 article__icon"></i>
+                <h3 class="article__title">Payments &amp; Billing</h3>
+              </a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="#" class="article box-shadow">
+                <i class="ui-user article__icon"></i>
+                <h3 class="article__title">Account Management</h3>
+              </a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="#" class="article box-shadow">
+                <i class="ui-briefcase article__icon"></i>
+                <h3 class="article__title">Bot</h3>
+              </a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="#" class="article box-shadow">
+                <i class="ui-cog article__icon"></i>
+                <h3 class="article__title">API</h3>
+              </a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="#" class="article box-shadow">
+                <i class="ui-paint-bucket article__icon"></i>
+                <h3 class="article__title">Ads</h3>
+              </a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="#" class="article box-shadow">
+                <i class="ui-lock-locked article__icon"></i>
+                <h3 class="article__title">Security</h3>
+              </a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="#" class="article box-shadow">
+                <i class="ui-wrenches article__icon"></i>
+                <h3 class="article__title">Managing Storage</h3>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section> <!-- end articles -->
+
+
+      <!-- CTA -->
+      <div class="cta bg-img bg-overlay white-text relative" style="background-image: url({{ url_for('static', filename='img/newsletter/newsletter_bg.jpg') }});">
+        <div class="container text-center">
+          <h3 class="cta__title relative">Need help? Contact us</h3>
+          <a href="#" class="btn btn--lg btn--color square">
+            <span>Contact Us</span>
+          </a>
+        </div>
+      </div>
+{% include 'shared/footer.html' %}
