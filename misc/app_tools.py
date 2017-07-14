@@ -4,8 +4,9 @@ from flask import render_template
 
 from config import ProdConfig
 
-from misc.extensions import redis
-from views import landing, products
+from misc.init import redis, db, admin
+from views import login, register, demo, landing, products
+from models import PlanModel, ProductsModel, NormanModelView
 
 
 def create_app(config_object=ProdConfig):
@@ -25,10 +26,17 @@ def create_app(config_object=ProdConfig):
 def register_extensions(app):
     """Register Flask extensions."""
     redis.init_app(app)
+    db.init_app(app)
+    admin.init_app(app)
+    admin.add_view(NormanModelView(PlanModel))
+    admin.add_view(NormanModelView(ProductsModel))
 
 
 def register_blueprints(app):
     """Register Flask blueprints."""
+    app.register_blueprint(demo.blueprint)
+    app.register_blueprint(login.blueprint)
+    app.register_blueprint(register.blueprint)
     app.register_blueprint(landing.blueprint)
     app.register_blueprint(products.blueprint)
     return None

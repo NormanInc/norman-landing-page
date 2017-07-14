@@ -1,3 +1,8 @@
+import os
+
+from pymongo import MongoClient
+
+
 class GoogleConfig:
     SAFEBROWSINGAPIKEY = 'AIzaSyARGechcnls1l2O80mA8Fh3q3_67JTb7Fg'
 
@@ -47,6 +52,17 @@ class UIConfig:
 
 
 class Config(UIConfig):
+    """Base configuration."""
+    SECRET_KEY = os.environ.get('NORMAN_SECRET', 'a9fb1b64-1f0f-11e7-95e2-7077816bf77d')  # TODO: Change me
+    APP_DIR = os.path.abspath(os.path.dirname(__file__))  # This directory
+    PROJECT_ROOT = os.path.abspath(os.path.join(APP_DIR, os.pardir))
+    BCRYPT_LOG_ROUNDS = 13
+    __version__ = '0.0.1'
+    ASSETS_DEBUG = False
+    DEBUG_TB_ENABLED = False  # Di-sable Debug toolbar
+    DEBUG_TB_INTERCEPT_REDIRECTS = False
+    CACHE_TYPE = 'redis'  # Can be "memcached", "redis", etc.
+    DEFAULT_EMAIL_SENDER = "bot.normanai@gmail.com"
     APP_NAME = "Norman"
 
 
@@ -54,11 +70,28 @@ class DevConfig(Config):
     ENV = 'dev'
     REDIS_URL = "redis://:password@localhost:6379/0"
     BASE_URL = "http://localhost:5000"
+    MONGODB_SETTINGS = {
+        'db': 'Norman',
+        'host': '127.0.0.1',
+        'port': 27017,
+        'password': '',
+        'alias': 'default'
+    }
+    pymongo_client = MongoClient('mongodb://localhost:27017/')
 
 
 class ProdConfig(Config):
     ENV = 'prod'
     REDIS_URL = "redis://:password@localhost:6379/0"
     BASE_URL = "https://www.norman-ml.herokuapp.com"
+    MONGODB_SETTINGS = {
+        'db': 'heroku_qcf3clms',
+        'host': 'ds111559.mlab.com',
+        'port': 11559,
+        'username': 'Olamilekan',
+        'password': 'toga',
+        'alias': 'default'
+    }
+    pymongo_client = MongoClient('mongodb://localhost:27017/')
 
 

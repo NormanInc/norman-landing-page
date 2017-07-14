@@ -1,0 +1,63 @@
+{% extends "shared/authLayout.html" %}
+
+{% block content %}
+    <body>
+        <div class="wrapper-page">
+            <div class="text-center">
+                <img class="logo logo--dark" src="{{ url_for('static', filename='auth/images/logo.png') }}"  style="height: 100px;" alt="logo">
+            </div>
+            <div class="text-center">
+                <h4>What project would you like to register for?</h4>
+            </div>
+        	<div class="row" style="padding-top: 20px; padding-left:20px;">
+                    <div class="col-lg-6 col-md-6 animated flipInX">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 class="text-custom" data-plugin="counterup"><a class="text-danger" href="{{ url_for('register.initRegistration') }}?option=plan&plan=">Norman Collate</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 animated flipInX">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 data-plugin="counterup"><a class="text-warning" href="{{ url_for('register.initRegistration') }}?option=plan&plan=">Norman Analytics</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 animated flipInX">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 data-plugin="counterup"><a class="text-purple" href="{{ url_for('register.initRegistration') }}?option=plan&plan=">Norman Bot</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 animated flipInX">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 data-plugin="counterup"><a class="text-custom" href="{{ url_for('register.initRegistration') }}?option=plan&plan=">Norman IHealth</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 animated flipInX">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 data-plugin="counterup"><a class="text-info" href="{{ url_for('register.initRegistration') }}?option=plan&plan=">Norman IDoctor</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 animated flipInX">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 data-plugin="counterup"><a class="text-pink" href="{{ url_for('register.initRegistration') }}?option=plan&plan=">Norman IPatient</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="text-center">
+                <h6>Don't know which to choose? Click <span class="text-info planOrProductToolTip" title="Plans are a combination of products while a product is a single Norman service.">here</span> for more information</h6>
+            </div>
+
+        </div>
+
+{% endblock %}

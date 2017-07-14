@@ -1,0 +1,76 @@
+{% extends "shared/authLayout.html" %}
+
+{% block content %}
+
+    <body>
+        <div class="wrapper-page">
+            <div class="text-center">
+                <img class="logo logo--dark" src="{{ url_for('static', filename='auth/images/logo.png') }}"  style="height: 100px;" alt="logo">
+            </div>
+        	<div class="m-t-40 card-box animated infinite bounce">
+                <div class="text-center">
+                    <h4 class="text-uppercase font-bold m-b-0">Register</h4>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal m-t-20" action="http://coderthemes.com/adminto_1.5/menu_2/index.html">
+
+						<div class="form-group ">
+							<div class="col-xs-12">
+								<input class="form-control" type="email" required="" placeholder="Email">
+							</div>
+						</div>
+
+						<div class="form-group ">
+							<div class="col-xs-12">
+								<input class="form-control" type="text" required="" placeholder="Username">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-xs-12">
+								<input class="form-control" type="password" required="" placeholder="Password">
+							</div>
+						</div>
+
+                        <div class="form-group">
+							<div class="col-xs-12">
+                                                <select class="form-control">
+                                                    <option>Plan</option>
+                                                    <option>Norman Collate</option>
+                                                    <option>Norman Analytics</option>
+                                                    <option>Norman Bot</option>
+                                                    <option>Norman IHealth</option>
+                                                </select>
+						</div>
+
+						<div class="form-group">
+							<div class="col-xs-12">
+								<div class="checkbox checkbox-custom">
+									<input id="checkbox-signup" type="checkbox" checked="checked">
+									<label for="checkbox-signup">I accept <a href="#">Terms and Conditions</a></label>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group text-center m-t-40">
+							<div class="col-xs-12">
+								<button class="btn btn-custom btn-bordred btn-block waves-effect waves-light" type="submit">
+									Register
+								</button>
+							</div>
+						</div>
+
+					</form>
+
+                </div>
+            </div>
+            <!-- end card-box -->
+
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<p class="text-muted">Already have account?<a href="page-login.html" class="text-primary m-l-5"><b>Sign In</b></a></p>
+				</div>
+			</div>
+
+        </div>
+{% endblock %}

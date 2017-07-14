@@ -1,0 +1,120 @@
+{% extends "shared/authLayout.html" %}
+
+{% block content %}
+
+     <div class="container">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="btn-group pull-right m-t-15">
+                           <a href="{{ url_for('register.preRegistration') }}?option=product"><button type="button" class="btn btn-custom dropdown-toggle waves-effect waves-light">Choose Product Instead <span class="m-l-5"></span></button></a>
+                        </div>
+                        <div class="text-center">
+                            <a href="{{ url_for('register.planOrProduct') }}"><img class="logo logo--dark" src="{{ url_for('static', filename='auth/images/logo.png') }}"  style="height: 50px;" alt="logo"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row m-t-12" style="padding-top: 75px; padding-left: 10px;">
+                    <div class="col-md-12">
+                        <div class="row">
+
+                            <!--Pricing Column-->
+                            <article class="pricing-column col-lg-3 col-sm-6">
+                                <div class="inner-box card-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Basic</h3>
+                                        <h2 class="plan-price">$19</h2>
+                                        <div class="plan-duration">Per Month</div>
+                                    </div>
+                                    <ul class="plan-stats list-unstyled text-center">
+                                        <li>5 Projects</li>
+                                        <li>1 GB Storage</li>
+                                        <li>No Domain</li>
+                                        <li>1 User</li>
+                                        <li>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="{{ url_for('register.initRegistration') }}?option=plan&plan=" class="btn btn-success btn-bordred btn-rounded waves-effect waves-light">Signup Now</a>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <!--Pricing Column-->
+                            <article class="pricing-column col-lg-3 col-sm-6">
+                                <div class="ribbon"><span>POPULAR</span></div>
+                                <div class="inner-box card-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Premium</h3>
+                                        <h2 class="plan-price">$29</h2>
+                                        <div class="plan-duration">Per Month</div>
+                                    </div>
+                                    <ul class="plan-stats list-unstyled text-center">
+                                        <li>5 Projects</li>
+                                        <li>1 GB Storage</li>
+                                        <li>No Domain</li>
+                                        <li>1 User</li>
+                                        <li>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="{{ url_for('register.initRegistration') }}?option=plan&plan=" class="btn btn-success btn-bordred btn-rounded waves-effect waves-light">Signup Now</a>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <!--Pricing Column-->
+                            <article class="pricing-column col-lg-3 col-sm-6">
+                                <div class="inner-box card-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Developer</h3>
+                                        <h2 class="plan-price">$39</h2>
+                                        <div class="plan-duration">Per Month</div>
+                                    </div>
+                                    <ul class="plan-stats list-unstyled text-center">
+                                        <li>5 Projects</li>
+                                        <li>1 GB Storage</li>
+                                        <li>No Domain</li>
+                                        <li>1 User</li>
+                                        <li>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="{{ url_for('register.initRegistration') }}?option=plan&plan=" class="btn btn-success btn-bordred btn-rounded waves-effect waves-light">Signup Now</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!--Pricing Column-->
+                            <article class="pricing-column col-lg-3 col-sm-6">
+                                <div class="inner-box card-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Business</h3>
+                                        <h2 class="plan-price">$49</h2>
+                                        <div class="plan-duration">Per Month</div>
+                                    </div>
+                                    <ul class="plan-stats list-unstyled text-center">
+                                        <li>5 Projects</li>
+                                        <li>1 GB Storage</li>
+                                        <li>No Domain</li>
+                                        <li>1 User</li>
+                                        <li>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="{{ url_for('register.initRegistration') }}?option=plan&plan=" class="btn btn-success btn-bordred btn-rounded waves-effect waves-light">Signup Now</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div><!-- end row -->
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+
+{% endblock %}
